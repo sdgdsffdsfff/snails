@@ -10,13 +10,14 @@
 	</parent>
 	<artifactId>snails-scheduler</artifactId>
 	<packaging>war</packaging>
-	<name>snails-scheduler Maven Webapp</name>
+	<name>snails-scheduler</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<spring.version>3.2.4.RELEASE</spring.version>
 		<slf4j.version>1.7.6</slf4j.version>
 		<logback.version>1.1.1</logback.version>
+        <jetty.version>8.1.8.v20121106</jetty.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -159,5 +160,33 @@
 	</dependencies>
 	<build>
 		<finalName>snails-scheduler</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
 	</build>
 </project>
